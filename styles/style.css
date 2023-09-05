@@ -1,62 +1,156 @@
-/* Reset some default styles */
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-}
+*{margin: 0px;
+  padding: 0px;}
 
-/* Style the container for the image */
-.image-container {
-    position: relative;
-    width: 300px; /* Adjust the width and height as needed */
-    height: 300px;
-    overflow: hidden;
-}
+/* ..................common share styles............................. */
+body{font-family: 'EB Garamond', serif;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Manrope', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Work Sans', sans-serif;}
 
-/* Style the image itself */
-.image-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Maintain aspect ratio and cover the container */
-    transition: transform 0.3s;
-}
+.primary-color{color: rgb(255, 66, 165);}
 
-/* Style the overlay */
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.645); /* Semi-transparent background color */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: opacity 0.3s;
-}
+.primary-btn{padding: 13px 22px;
+             border:1px solid rgb(255, 66, 165);
+             border-radius: 48px;
+             background-color:rgb(255, 66, 165); 
+             color: white;
+             text-align: center;
+             font-size:1.15rem ;
+             font-weight: 1.5rem;}
 
-/* Style the play button icon */
-.play-button {
-    font-size: 80px;
-    color: white;
-    cursor: pointer;
-    background-color: white;
-}
+/* ...........................header related styles.................. */
 
-/* Style the text */
-.text {
-    color: white;
-    font-size: 18px;
-    margin-top: 10px;
-}
+ 
 
-/* Create the hover effect */
-.image-container:hover img {
-    transform: scale(1.1); /* Enlarge the image on hover */
-}
+/* ......................navbar related styles....................... */
+.nav-container{display: flex;
+               justify-content: space-between;
+               align-items: center;
+               margin: 20px 150px;}
+.nav-item-1{display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;}
+.nav-item-2>ul{display: flex; 
+               }
+.nav-item-2 ul li{list-style: none; 
+                                  }
+.nav-item-2 ul li a {text-decoration: none;
+                     margin-right: 30px;
+                     color: #3C354F;
+                     text-align: center;
+                     font-size: 1.12rem;
+                     font-weight: 500;
+                    }
+.nav-item-2 ul li a:hover{border-radius: 8px;
+                    background: rgba(11, 2, 35, 0.10);
+                    padding:10px 20px ;
+                    border: 2px solid rgb(255, 66, 165);
+                     }
+.youtube-icon{margin-right: 20px;}
+/* .nav-icon{border-radius: 8px;
+          background: rgba(11, 2, 35, 0.10);
+          padding:10px 20px ;
+          margin-top: -10px;} */
 
-.image-container:hover .overlay {
-    opacity: 1; /* Show the overlay on hover */
+.nav-title{font-size: 2.8rem;
+           font-weight: 700;}
+
+/* ..................banner related styles............................. */
+.banner-container{height: 500px;
+                  width: 100%;
+                 background-image:url(../images/Group-14.png) ;
+                 display: flex;
+                /* align-items: center; */
+                 justify-content: space-between;}
+.banner-img{width: 83%;}
+.banner-text{color: #0B0223;
+             font-size: 2.3rem;
+             font-weight: 1.1rem;
+             margin-bottom: 10px;}
+.banner-title{
+             font-size: 5.1rem;
+             font-weight: 1.5rem;
+             background: linear-gradient(180deg, #F948B2 0%, #8758F1 100%);
+             background-clip: text;
+             -webkit-background-clip: text;
+             -webkit-text-fill-color: transparent;
+             margin-bottom: 20px;}
+.banner-feature{color: #534C64;
+                font-size: 1.2rem;
+                font-weight: 1.2rem;
+                margin-bottom: 30px;}
+.banner-feature li{margin-bottom: 20px;
+                   list-style: none;}
+
+.banner-item-1{margin-left: 150px;
+               margin-top: 90px;}
+
+.banner-item-2{margin-left: 400px;
+               margin-top: 45px;}
+.bnr-btn-2{background: #4EC5F7;
+           border:1px solid #4EC5F7;
+           margin-left: 20px;}
+
+
+
+
+
+
+
+
+
+
+               /* responsive area */
+    
+@media screen and (max-width:576px) {
+
+    /* ............navbar................. */
+
+    .nav-container{flex-direction: column;
+                   margin: 30px 50px;}
+    .nav-item-2>ul{flex-direction: column;
+                   margin-top: 20px;}
+    .nav-item-2 ul li {margin-top: 25px;
+                       margin-left: 80px;}
+    .nav-icon a { margin-left: 0px;
+                  margin-top: 10px;}
+    .nav-icon-container{margin-left: -30px;}
+    .youtube-icon{margin-right: 3px;}
+
+    /* ..............banner................ */
+
+    .banner-container{flex-direction:column-reverse;height: auto;}
+    .banner-img{width: 88%;margin-top: 10px;}
+    .banner-item-2{margin-left: 50px;
+         }
+         .banner-item-1{margin-left: 70px;
+            
+    }
+     
+
+} 
+
+@media screen and (min-width:576.1px) and (max-width:992px) {
+
+
+      /* ............navbar................. */
+
+    .nav-container{ 
+                   margin: 30px 20px;} 
+    .nav-item-2 ul li a { 
+                    margin-right: 15px; }
+
+                    /* .............banner........... */
+
+
+    .banner-container{flex-direction:column-reverse;height: auto;}
+    .banner-img{width: 80%;margin-top: 10px;}
+    .banner-item-2{margin-left: 110px;
+         }
+         .banner-item-1{margin-left: 240px;
+             
+    }
 }
